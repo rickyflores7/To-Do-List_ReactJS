@@ -1,37 +1,46 @@
-###GET /todos
+### GET /todos
 GET http://localhost:8081/todos
 Content-Type: application/json
 
-###GET /todos/:id
-GET http://localhost:8081/todos/3
+### GET /todos/:id
+GET http://localhost:8081/todos/6465e7ba56aa5ef0d3e61813
 Content-Type: application/json
 
-###POST /todos - { "task": "Make a wish" }
+### POST /todos - { "task": "Make a wish" }
 POST http://localhost:8081/todos
 Content-Type: application/json
 
 {
-  "id": 123, 
-  "task": "Make a wish",
-  "checked": false
+    "task": "Make a wish",
+    "checked": true
 }
 
-###PATCH /todos/:id - { "checked": true }
-PATCH http://localhost:8081/todos/3
+### POST /todos - { "stuff": "" }
+POST http://localhost:8081/todos
 Content-Type: application/json
 
 {
- "checked": true
+    "stuff":""
 }
 
-###PATCH /todos/:id - { "checked": "" }
-PATCH http://localhost:8081/todos/1
+### PATCH /todos/:id - { "checked": true }
+PATCH http://localhost:8081/todos/6465e9f124621b84991e7f76
+Content-Type: application/json
+
+{
+ "checked": false
+}
+
+### PATCH /todos/:id - { "checked": "" }
+PATCH http://localhost:8081/todos/2
 Content-Type: application/json
 
 {
  "checked": ""
 }
 
-###DELETE /todos/:id
-DELETE  http://localhost:8081/todos/1
-Content-Type: application/json
+### DELETE /todos
+DELETE http://localhost:8081/todos
+
+### DELETE /todos/:id
+DELETE http://localhost:8081/todos/6465e7ba56aa5ef0d3e61813
